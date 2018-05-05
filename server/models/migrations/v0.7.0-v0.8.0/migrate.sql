@@ -166,3 +166,21 @@ CREATE TABLE `role_actions` (
 ALTER TABLE `flux` ADD COLUMN `description` TEXT;
 ALTER TABLE `inventory` DROP COLUMN `is_broken`;
 ALTER TABLE `inventory` ADD COLUMN `sellable` TINYINT(1)   NOT NULL DEFAULT 1;
+
+INSERT IGNORE INTO `report` (`id`, `report_key`, `title_key`) VALUES
+  (1, 'cashflow', 'TREE.CASHFLOW'),
+  (2, 'accounts_chart', 'REPORT.CHART_OF_ACCOUNTS'),
+  (3, 'income_expense', 'REPORT.INCOME_EXPENSE'),
+  (4, 'balance_report', 'REPORT.BALANCE'),
+  (5, 'aged_debtors', 'TREE.AGED_DEBTORS'),
+  (6, 'account_report', 'REPORT.REPORT_ACCOUNTS.TITLE'),
+  (7, 'cashflowByService', 'REPORT.CASHFLOW_BY_SERVICE.TITLE'),
+  (8, 'open_debtors', 'REPORT.OPEN_DEBTORS.TITLE'),
+  (9, 'clients_report','REPORT.CLIENTS'),
+  (10, 'aged_creditors','TREE.AGED_CREDITORS'),
+  (11, 'balance_sheet_report', 'REPORT.BALANCE_SHEET.TITLE'),
+  (12, 'cash_report', 'REPORT.CASH_REPORT'),
+  (13, 'inventory_report', 'REPORT.STOCK.TITLE'),
+  (14, 'inventory_file', 'REPORT.STOCK.INVENTORY_REPORT'),
+  (15, 'operating', 'TREE.OPERATING_ACCOUNT'),
+  (16, 'stock_exit', 'REPORT.STOCK.EXIT_REPORT');
